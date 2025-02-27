@@ -4,21 +4,21 @@
 
 import java.util.ArrayList;
 
-
+//This is the object class for the hand that the dealer and the player will get
 public class Hand {
     private final ArrayList<Card> cards;
     private int totalValue;
 
-
+    //Contructor for the hand class that takes in the cards arraylist
     public Hand() {
         cards  = new ArrayList<>();
         this.totalValue = 0; 
     }
-
+    //Method that inputs a new card into the hand the player or dealer has and also calculates the card's value. 
     public void addCard(Card card) {
         cards.add(card);
         totalValue += card.getValue();
-        //recalculateTotalValue();
+        recalculateTotalValue();
     }
 
     //Incase the player gets an Ace, we need to recalculate the total value of the hand
@@ -37,7 +37,7 @@ public class Hand {
             }
         }
     }
-
+    //Calculates the total value of the hand
     public int getTotalValue() {
         return totalValue;
         
