@@ -24,9 +24,11 @@ public class Deck {
         }
         
     }
+    //Method to shuffle the deck of cards(Randomize)
     public void shuffle() {
         Collections.shuffle(deck);
     }
+    //Method that gets a random card from the deck and uses this to input to either the dealer's or the player's hand
     public Card drawCard() {
         return deck.remove(0);
     }
