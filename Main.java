@@ -16,15 +16,15 @@ public class Main {
         dealer = new Dealer();
         scanner = new Scanner(System.in);
     }
-
+    //This method will start the game
     public void startRound(){
         System.out.println("Welcome enjoy losing all your money!");
-
+        //Gives both the dealer and the player two cards to start the round
         player.addCard(deck.drawCard());
         player.addCard(deck.drawCard());
         dealer.addCard(deck.drawCard());
         dealer.addCard(deck.drawCard());
-
+        //Prints both the dealer's and the player's cards and their values
         System.out.println("Your cards are "+ player.showHand() + " (Total value: " + player.getHandValue() + ")");
         System.out.println("Dealer's cards are " + dealer.showHand() + " (Total value: " + dealer.getHandValue() + " )"); 
 
@@ -79,6 +79,7 @@ public class Main {
             }
         }
     }
+    //Main method = two lines of code (Technically)
     public static void main(String[] args) {
         Main blackjack = new Main();
         blackjack.startRound();
